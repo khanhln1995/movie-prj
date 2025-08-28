@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Section from "./components/Content/Section";
+import Footer from "./components/Footer/Footer";
 
 const images = [
   {
@@ -57,16 +58,20 @@ function App() {
   }, [])
 
   return (
-    <div className="h-[200vh]">
+    <div className="min-h-screen flex flex-col">
+
       {/* Header */}
       <Header scroll={scroll} />
 
       {/* Content */}
-      <div className="relative h-[88vh]">
-        <Section slides={slides} onSlideClick={handleSlideClick} />
-      </div>
+      <main className="flex-1 relative">
+        <div className="relative h-[88vh]">
+          <Section slides={slides} onSlideClick={handleSlideClick} />
+        </div>
+      </main>
 
       {/* Footer */}
+      <Footer />
 
     </div>
   );
