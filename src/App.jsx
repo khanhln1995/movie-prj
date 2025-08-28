@@ -65,6 +65,9 @@ function App() {
       <div className="relative h-[88vh]">
         <Section slides={slides} onSlideClick={handleSlideClick} />
       </div>
+
+      {/* Footer */}
+
     </div>
   );
 }
