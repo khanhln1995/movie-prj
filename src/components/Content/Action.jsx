@@ -10,7 +10,7 @@ function Action() {
             </a>
 
             {/* Like + Info */}
-            <div className="w-[140px] h-[54px] inline-flex border-2 border-[rgba(255,255,255,0.1)] rounded-[30px] overflow-hidden">
+            <div className="w-[140px] h-[54px] inline-flex border-2 border-[rgba(255,255,255,0.1)] rounded-[30px] overflow-hidden hover:border-white">
                 <a className="text-[20px] text-white flex-1 flex items-center justify-center hover:text-yellow-300 hover:bg-white/10 cursor-pointer">
                     <FontAwesomeIcon icon={faHeart} />
                 </a>
