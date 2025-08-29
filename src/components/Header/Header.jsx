@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 import ActionButtons from "./ActionButtons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-function Header({ scroll }) {
+function Header({ scroll, onOpenLogin }) {
 
   return (
     <header
@@ -21,7 +21,7 @@ function Header({ scroll }) {
 
       <div className="flex grow items-center justify-between gap-8">
         <NavMenu />
-        <ActionButtons />
+        <ActionButtons onOpenLogin={onOpenLogin} />
       </div>
 
     </header>

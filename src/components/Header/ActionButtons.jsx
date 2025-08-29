@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import Modal from "../Modal";
+import ModalLogin from "../Modal/ModalLogin";
 import Tippy from "@tippyjs/react";
 
-function ActionButtons() {
+function ActionButtons({ onOpenLogin }) {
     const [modalOpen, setModalOpen] = useState(false);
     return (
         <div className="flex items-center gap-4">
@@ -69,7 +69,7 @@ function ActionButtons() {
 
             {/* Thành viên */}
             <button
-                onClick={() => setModalOpen(true)}
+                onClick={onOpenLogin}
                 className="flex items-center gap-2 bg-white text-sm h-[43.77px] px-[22.4px]
                    rounded-full text-black font-medium hover:opacity-90 transition cursor-pointer"
             >
@@ -78,7 +78,7 @@ function ActionButtons() {
             </button>
 
             {/* Modal */}
-            <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+            <ModalLogin isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         </div>
     );
 }

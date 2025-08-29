@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Section from "./components/Content/Section";
 import Footer from "./components/Footer/Footer";
+import ModalLogin from "./components/Modal/ModalLogin";
+import ModalRegister from "./components/Modal/ModalRegister";
 
 const images = [
   {
@@ -41,6 +43,9 @@ function App() {
   const [scroll, setScroll] = useState(false)
   const [slides, setSlides] = useState(images)
 
+  const [isLoginOpen, setIsLoginOpen] = useState(false)
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false)
+
   const handleSlideClick = (index) => {
     const updated = slides.map((img, i) => ({
       ...img,
@@ -61,7 +66,7 @@ function App() {
     <div className="min-h-screen flex flex-col">
 
       {/* Header */}
-      <Header scroll={scroll} />
+      <Header scroll={scroll} onOpenLogin={() => setIsLoginOpen(true)} />
 
       {/* Content */}
       <main className="flex-1 relative">
@@ -73,6 +78,24 @@ function App() {
       {/* Footer */}
       <Footer />
 
+      {/* Modal */}
+      <ModalLogin
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        onSwitch={() => {
+          setIsLoginOpen(false)
+          setIsRegisterOpen(true)
+        }}
+      />
+
+      <ModalRegister
+        isOpen={isRegisterOpen}
+        onClose={() => setIsRegisterOpen(false)}
+        onSwitch={() => {
+          setIsRegisterOpen(false)
+          setIsLoginOpen(true)
+        }}
+      />
     </div>
   );
 }

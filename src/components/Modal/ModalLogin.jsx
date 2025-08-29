@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-function Modal({ isOpen, onClose }) {
+function ModalLogin({ isOpen, onClose, onSwitch }) {
     if (!isOpen) return null
 
     return (
@@ -35,7 +35,15 @@ function Modal({ isOpen, onClose }) {
                         <h4 className="text-[19.6px] font-semibold leading-[1.5] mb-2 text-white">Đăng nhập</h4>
                     </div>
                     <div>
-                        <p className="mb-6 text-[14px] text-[#FFFFFF99]">Nếu bạn chưa có tài khoản, <a className="text-yellow-300 cursor-pointer">đăng ký ngay</a></p>
+                        <p className="mb-6 text-[14px] text-[#FFFFFF99]">
+                            Nếu bạn chưa có tài khoản, {" "}
+                            <span
+                                className="text-yellow-300 cursor-pointer"
+                                onClick={onSwitch}
+                            >
+                                đăng ký ngay
+                            </span>
+                        </p>
                         <form className="space-y-4">
                             <div className="">
                                 <input
@@ -66,4 +74,4 @@ function Modal({ isOpen, onClose }) {
     );
 }
 
-export default Modal;
+export default ModalLogin;
