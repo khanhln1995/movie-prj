@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Tippy from "@tippyjs/react/headless";
 
-export default function MenuItem({ title, icon, badge, dropdownItems = [] }) {
+export default function MenuItem({ title, icon, badge, dropdownItems = [], disableHover = false }) {
 
   if (dropdownItems.length === 0) {
     return (
-      <button className="px-3 leading-[36px] text-white text-sm font-normal cursor-pointer flex items-center hover:text-yellow-300">
+      <button className={`px-3 leading-[36px] text-white text-sm font-normal cursor-pointer flex items-center
+        ${!disableHover ? "hover:text-yellow-300" : "hover:!text-white"}`}>
         {badge && (
           <span className="mr-2 text-[10px] font-medium px-[2.5px] py-[2px] bg-yellow-300 rounded-[3px] text-black leading-none ">
             {badge}
@@ -45,7 +46,8 @@ export default function MenuItem({ title, icon, badge, dropdownItems = [] }) {
       )}
     >
       <button
-        className="px-3 leading-[36px] text-white text-sm font-normal cursor-pointer flex items-center hover:text-yellow-300"
+        className={`px-3 leading-[36px] text-white text-sm font-normal cursor-pointer flex items-center hover:text-yellow-300
+          ${!disableHover ? "hover:text-yellow-300" : "hover:!text-white"} `}
       >
 
         {badge && (

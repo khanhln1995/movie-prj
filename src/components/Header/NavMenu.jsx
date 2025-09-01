@@ -6,6 +6,7 @@ function NavMenu() {
         <div className="flex items-center gap-4">
             <MenuItem title="Chủ Đề" />
             <MenuItem
+                disableHover={true}
                 title="Thể loại"
                 icon={faCaretDown}
                 dropdownItems={[
@@ -30,6 +31,7 @@ function NavMenu() {
             <MenuItem title="Phim Bộ" />
             <MenuItem title="Xem Chung" />
             <MenuItem
+                disableHover={true}
                 title="Quốc gia"
                 icon={faCaretDown}
                 dropdownItems={[

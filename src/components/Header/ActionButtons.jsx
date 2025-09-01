@@ -44,7 +44,7 @@ function ActionButtons({ onOpenLogin }) {
                     </div>
                 }
             >
-                <div className="shrink-0 pr-4 border-r border-[#fff4] flex items-center gap-2 cursor-pointer">
+                <div className="shrink-0 pr-8 border-r border-[#fff4] flex items-center gap-2 cursor-pointer">
                     <svg className="w-9 h-9" id="Pc" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             fillRule="evenodd"
@@ -60,7 +60,7 @@ function ActionButtons({ onOpenLogin }) {
                         />
                     </svg>
 
-                    <div className="flex flex-col gap-[0.3rem] text-[12px] leading-[1.1]">
+                    <div className="flex flex-col gap-[0.3rem] text-[12px] leading-[1.1] py-1.5">
                         <span>Tải ứng dụng</span>
                         <strong className="text-[14px] font-bold">RoPhim</strong>
                     </div>
@@ -70,8 +70,8 @@ function ActionButtons({ onOpenLogin }) {
             {/* Thành viên */}
             <button
                 onClick={onOpenLogin}
-                className="flex items-center gap-2 bg-white text-sm h-[43.77px] px-[22.4px]
-                   rounded-full text-black font-medium hover:opacity-90 transition cursor-pointer"
+                className="flex ml-5 items-center gap-2 bg-white/90 text-sm w-[145px] h-[43.77px] px-[22.4px]
+                   rounded-full text-black font-medium hover:bg-white transition cursor-pointer"
             >
                 <FontAwesomeIcon icon={faUser} />
                 <span>Thành viên</span>

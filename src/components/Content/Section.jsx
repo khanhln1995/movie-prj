@@ -18,7 +18,7 @@ function Section({ slides = [], onSlideClick = () => { } }) {
 
             {/* Content */}
             <div className="cursor-grab w-full h-full max-w-[1900px] mx-auto overflow-hidden z-[2] relative flex items-end">
-                <MovieInfo />
+                <MovieInfo movie={activeSlide} />
                 <SlideList slides={slides} onSlideClick={onSlideClick} />
             </div>
         </div>
