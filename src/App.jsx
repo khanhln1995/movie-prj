@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
-import Section from "./components/Content/Section";
+import Section from "./components/Content/MovieSlide/Section";
 import Footer from "./components/Footer/Footer";
 import ModalLogin from "./components/Modal/ModalLogin";
 import ModalRegister from "./components/Modal/ModalRegister";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const images = [
   {
@@ -129,9 +131,152 @@ function App() {
       <Header scroll={scroll} onOpenLogin={() => setIsLoginOpen(true)} />
 
       {/* Content */}
+      {/* Slider */}
       <main className="flex-1 relative">
         <div className="relative h-[88vh]">
           <Section slides={slides} onSlideClick={handleSlideClick} />
+        </div>
+
+        <div className="relative z-9 pt-0 !pb-[10rem] min-h-[calc(100vh-400px)]">
+          <div className="flex flex-col gap-[50px]">
+
+            {/* Bạn đang quan tâm gì ? */}
+            <div className="w-full px-[50px] mx-auto max-w-[1900px] relative">
+
+              <div className="flex items-center justify-start gap-4 relative min-h-[44px] mb-[1.2rem]">
+                <h3 className="text-[28px] leading-[1.4] font-semibold m-0 text-white [text-shadow:0_2px_1px_rgba(0,0,0,0.3)]">
+                  Bạn đang quan tâm gì?
+                </h3>
+              </div>
+
+
+              <div className="grid grid-cols-7 gap-4 justify-between items-stretch mt-0">
+
+                {/* Marvel */}
+                <a
+                  href="/c/marvel-sieu-anh-hung.vhyYAW"
+                  className="relative flex flex-col rounded-xl overflow-hidden group cursor-pointer no-underline w-[243px] h-[152px]
+                  transform transition-transform duration-500 ease-in-out hover:-translate-y-3 hover:shadow-xl"
+                >
+                  <div className="absolute inset-0 bg-[rgb(50,79,209)]"></div>
+                  <div className="relative z-[3] flex flex-col items-start justify-end w-full h-full px-6 pb-6 gap-3">
+                    <div className="font-bold text-[28px] text-white leading-[1.3] [text-shadow:0_1px_0_#0002] overflow-hidden [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]">
+                      Marvel
+                    </div>
+                    <div className="inline-flex items-center text-white text-[14px] font-bold transition">
+                      <span>Xem chủ đề</span>
+                      <FontAwesomeIcon icon={faAngleRight} />
+                    </div>
+                  </div>
+                </a>
+
+                {/* 4K */}
+                <a
+                  href="/c/4k.bZE4Tf"
+                  className="relative flex flex-col rounded-xl overflow-hidden group cursor-pointer no-underline w-[243px] h-[152px]
+                  transform transition-transform duration-500 ease-in-out hover:-translate-y-3 hover:shadow-xl"
+                >
+                  <div className="absolute inset-0 bg-[rgb(102,102,153)]"></div>
+                  <div className="relative z-[3] flex flex-col items-start justify-end w-full h-full px-6 pb-6 gap-3">
+                    <div className="font-bold text-[28px] text-white leading-[1.3] [text-shadow:0_1px_0_#0002]">
+                      4K
+                    </div>
+                    <div className="inline-flex items-center text-white text-[14px] font-bold transition">
+                      <span>Xem chủ đề</span>
+                      <FontAwesomeIcon icon={faAngleRight} />
+                    </div>
+                  </div>
+                </a>
+
+                {/* Sitcom */}
+                <a
+                  href="/c/sitcom-series-us.SosVge"
+                  className="relative flex flex-col rounded-xl overflow-hidden group cursor-pointer no-underline w-[243px] h-[152px]
+                  transform transition-transform duration-500 ease-in-out hover:-translate-y-3 hover:shadow-xl"
+                >
+                  <div className="absolute inset-0 bg-[rgb(27,133,108)]"></div>
+                  <div className="relative z-[3] flex flex-col items-start justify-end w-full h-full px-6 pb-6 gap-3">
+                    <div className="font-bold text-[28px] text-white leading-[1.3] [text-shadow:0_1px_0_#0002]">
+                      Sitcom
+                    </div>
+                    <div className="inline-flex items-center text-white text-[14px] font-bold transition">
+                      <span>Xem chủ đề</span>
+                      <FontAwesomeIcon icon={faAngleRight} />
+                    </div>
+                  </div>
+                </a>
+
+                {/* Lồng tiếng */}
+                <a
+                  href="/c/long-tieng-cuc-manh.PGxRUU"
+                  className="relative flex flex-col rounded-xl overflow-hidden group cursor-pointer no-underline w-[243px] h-[152px]
+                  transform transition-transform duration-500 ease-in-out hover:-translate-y-3 hover:shadow-xl"
+                >
+                  <div className="absolute inset-0 bg-[rgb(119,97,180)]"></div>
+                  <div className="relative z-[3] flex flex-col items-start justify-end w-full h-full px-6 pb-6 gap-3">
+                    <div className="font-bold text-[24px] text-white leading-[1.3] [text-shadow:0_1px_0_#0002]">
+                      Lồng Tiếng Cực Mạnh
+                    </div>
+                    <div className="inline-flex items-center text-white text-[14px] font-bold transition">
+                      <span>Xem chủ đề</span>
+                      <FontAwesomeIcon icon={faAngleRight} />
+                    </div>
+                  </div>
+                </a>
+
+                {/* Xuyên Không */}
+                <a
+                  href="/c/xuyen-khong.3TQ3S1"
+                  className="relative flex flex-col rounded-xl overflow-hidden group cursor-pointer no-underline w-[243px] h-[152px]
+                  transform transition-transform duration-500 ease-in-out hover:-translate-y-3 hover:shadow-xl"
+                >
+                  <div className="absolute inset-0 bg-[rgb(205,126,95)]"></div>
+                  <div className="relative z-[3] flex flex-col items-start justify-end w-full h-full px-6 pb-6 gap-3">
+                    <div className="font-bold text-[28px] text-white leading-[1.3] [text-shadow:0_1px_0_#0002]">
+                      Xuyên Không
+                    </div>
+                    <div className="inline-flex items-center text-white text-[14px] font-bold transition">
+                      <span>Xem chủ đề</span>
+                      <FontAwesomeIcon icon={faAngleRight} />
+                    </div>
+                  </div>
+                </a>
+
+                {/* Cổ Trang */}
+                <a
+                  href="/c/co-trang.wCSzYH"
+                  className="relative flex flex-col rounded-xl overflow-hidden group cursor-pointer no-underline w-[243px] h-[152px]
+                  transform transition-transform duration-500 ease-in-out hover:-translate-y-3 hover:shadow-xl"
+                >
+                  <div className="absolute inset-0 bg-[rgb(167,57,57)]"></div>
+                  <div className="relative z-[3] flex flex-col items-start justify-end w-full h-full px-6 pb-6 gap-3">
+                    <div className="font-bold text-[28px] text-white leading-[1.3] [text-shadow:0_1px_0_#0002]">
+                      Cổ Trang
+                    </div>
+                    <div className="inline-flex items-center text-white text-[14px] font-bold transition">
+                      <span>Xem chủ đề</span>
+                      <FontAwesomeIcon icon={faAngleRight} />
+                    </div>
+                  </div>
+                </a>
+
+                {/* +4 Chủ đề */}
+                <a
+                  href="/chu-de"
+                  className="relative flex items-center justify-center rounded-xl overflow-hidden group cursor-pointer no-underline w-[243px] h-[152px]
+                  transform transition-transform duration-500 ease-in-out hover:-translate-y-3 hover:shadow-xl"
+                >
+                  <div className="absolute inset-0 bg-[rgb(46,50,69)]"></div>
+                  <div className="relative z-[3] text-white font-bold text-[28px]">
+                    +4 chủ đề
+                  </div>
+                </a>
+              </div>
+
+            </div>
+
+
+          </div>
         </div>
       </main>
 

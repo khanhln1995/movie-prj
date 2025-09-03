@@ -1,5 +1,5 @@
-import MovieInfo from "./MovieInfo";
-import SlideList from "./SlideList";
+import MovieInfo from "../MovieSlide/MovieInfo";
+import SlideList from "../MovieSlide/SlideList";
 
 function Section({ slides = [], onSlideClick = () => { } }) {
     const activeSlide = slides.find((s) => s.isActive) || slides[0] || {};

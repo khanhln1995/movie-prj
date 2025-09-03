@@ -1,4 +1,4 @@
-import Action from "./Action";
+import Action from "../MovieSlide/Action";
 
 function MovieInfo({ movie }) {
     if (!movie) return null
