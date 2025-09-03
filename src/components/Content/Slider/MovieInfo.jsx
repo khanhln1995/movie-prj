@@ -1,10 +1,10 @@
-import Action from "../MovieSlide/Action";
+import Action from "../Slider/Action";
 
 function MovieInfo({ movie }) {
     if (!movie) return null
 
     return (
-        <div className="relative z-[5] max-w-[700px] w-full h-[619.89px] px-[50px] py-[100px] opacity-100">
+        <div className="relative z-[5] max-w-[700px] w-full h-[619.89px] px-[50px]  opacity-100">
             <div className="w-[540px] h-[442.28px]">
                 {/* Logo phim */}
                 <div className="mb-4">
